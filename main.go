@@ -1,14 +1,11 @@
 package main
 
-import "log"
+import (
+	"log"
+)
 
 func main() {
-	var mySlice []string
+	names := []string{"one", "seven", "fish", "cat"}
 
-	mySlice = append(mySlice, "Trevor")
-	mySlice = append(mySlice, "John")
-	mySlice = append(mySlice, "Mary")
-
-	log.Println(mySlice)
-
+	log.Println(names)
 }
