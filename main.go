@@ -1,24 +1,20 @@
 package main
 
-import "fmt"
+import "log"
 
-func main() {
-	fmt.Println("Hello, World!")
-
-	var whatToSay string
-	var i int64
-
-	whatToSay = "Goodbye, cruel world!"
-	fmt.Println(whatToSay)
-
-	i = 7
-	fmt.Println("i is set to", i)
-
-	whatWasSaid, theOtherThingThatWasSaid := saySomething()
-
-	fmt.Println("The function returned", whatWasSaid, theOtherThingThatWasSaid)
+type myStruct struct {
+	FirstName string
 }
 
-func saySomething() (string, string) {
-	return "something", "else"
+func main() {
+	var myVar myStruct
+	myVar.FirstName = "John"
+
+	myVar2 := myStruct{
+		FirstName: "Mary",
+	}
+
+	log.Println("myVar is set to ", myVar.FirstName)
+	log.Println("myVar2 is set to ", myVar2.FirstName)
+
 }
